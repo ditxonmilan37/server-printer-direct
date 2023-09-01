@@ -103,7 +103,6 @@ export const sendPrinterPage = async (req: Request, res: Response) => {
       if (err) {
         throw new Error("No se pudo cargar el archivo");
       } else {
-        console.log("roue ", route);
         printer.printDirect({
           printer: nameprinter,
           data: fs.readFileSync(route + "page.pdf"), // or simple String: "some text"
